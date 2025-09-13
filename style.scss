@@ -1,0 +1,449 @@
+// ==========================
+// VARIABILI
+// ==========================
+$primary-color: #fd9c56;
+$secondary-color: #3f4d8e;
+$bg-color: #171c30;
+$text-color: #ffffff;
+$text-color-secondary: #b3b3b3;
+$footer-bg: #3d3d3d;
+
+// ==========================
+// RESET BASE
+// ==========================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  scroll-behavior: smooth;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+body {
+  padding-top: 80px;
+}
+
+// ==========================
+// MIXINS
+// ==========================
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// ==========================
+// NAVBAR
+// ==========================
+.navbar {
+  width: 100%;
+  color: $secondary-color !important;
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  .logo {
+    h1 {
+      font-size: 24px;
+      color: $text-color;
+
+      span {
+        color: $primary-color;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .navbar-nav {
+    li {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        transition: 0.4s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .main-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid $primary-color;
+    color: $text-color;
+    background-color: transparent;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+// ==========================
+// HERO
+// ==========================
+.hero {
+  padding: 120px 0;
+
+  .main-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid $primary-color;
+    color: $text-color;
+    background-color: transparent;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  .section_title {
+    h1 {
+      font-size: 6rem;
+      color: $primary-color;
+      font-weight: 700;
+      line-height: 6rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: $text-color-secondary;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .section_image {
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: -180px;
+    }
+  }
+}
+
+// ==========================
+// SKILLS
+// ==========================
+.skills {
+  text-align: center;
+  padding: 50px 0;
+  background-color: $bg-color;
+
+  h2 {
+    margin-bottom: 30px;
+    color: $text-color;
+    font-size: 3.4rem;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .skills-container {
+    @include flex-center(row, center, stretch);
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 50px 0 40px;
+
+    .skills-box {
+      flex: 1 1 250px;
+      max-width: 350px;
+      min-width: 200px;
+      height: auto;
+      background: $secondary-color;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: 0.2rem solid $text-color;
+      transition: 0.5s ease;
+      @include flex-center(column, flex-start, center);
+
+      &:hover {
+        border-color: $primary-color;
+        transform: scale(1.05);
+      }
+
+      i {
+        font-size: 5rem;
+        color: $primary-color;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 30px;
+      }
+    }
+  }
+}
+
+// ==========================
+// PORTFOLIO
+// ==========================
+.portfolio {
+  background-color: $bg-color;
+  padding: 50px 0;
+
+  h2 {
+    font-size: 3.4rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    margin: 30px 0 80px;
+  }
+
+  .portfolio_wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    place-items: center;
+  }
+
+  .portfolio_card_wrap {
+    position: relative;
+    overflow: visible;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 170px;
+      height: 170px;
+      background-color: $primary-color;
+      border-radius: 4px;
+      z-index: 0;
+      transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    &:hover::before {
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+    }
+
+    .portfolio_card {
+      width: 100%;
+      height: auto;
+      background-color: $secondary-color;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// ==========================
+// CONTATTI
+// ==========================
+.contatti {
+  background-color: $bg-color;
+  padding: 50px 0 100px;
+  color: $text-color;
+  font-family: sans-serif;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 10px 0 40px;
+    text-align: center;
+  }
+
+  .contact_wrapper {
+    @include flex-center(row, center, flex-start);
+    flex-wrap: nowrap;
+    gap: 30px;
+
+    .contact_form {
+      flex: 1 1 50%;
+      max-width: 600px;
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .input_box {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          flex-wrap: wrap;
+
+          input, textarea {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            font-size: 1rem;
+            flex: 1;
+          }
+
+          textarea {
+            width: 100%;
+            resize: vertical;
+            min-height: 150px;
+          }
+        }
+
+        .main-btn {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          border: 2px solid $primary-color;
+          color: $text-color;
+          background-color: transparent;
+          border-radius: 10px;
+          font-size: 1rem;
+          cursor: pointer;
+          text-align: center;
+          transition: 0.4s;
+
+          &:hover {
+            background-color: $primary-color;
+            color: $bg-color;
+          }
+        }
+      }
+    }
+
+    .contact_image {
+      flex: 1 1 50%;
+      max-width: 500px;
+      @include flex-center(row, center, center);
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// ==========================
+// FOOTER
+// ==========================
+.footer {
+  @include flex-center(row, space-between, center);
+  flex-wrap: wrap;
+  padding: 0.8rem 9%;
+  background: $footer-bg;
+
+  .footer-text {
+    p {
+      font-size: 1.1rem;
+      color: $text-color;
+    }
+  }
+
+  .footer-iconTop {
+    a {
+      @include flex-center(row, center, center);
+      padding: 0.6rem 1rem;
+      background-color: $bg-color;
+      border-radius: 0.8rem;
+      text-decoration: none;
+
+      &:hover {
+        box-shadow: 0 0 1rem $primary-color;
+      }
+
+      i {
+        font-size: 2rem;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// ==========================
+// MEDIA QUERIES
+// ==========================
+@media screen and (max-width: 991px) {
+  .portfolio_wrap {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .contatti .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .portfolio_wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .section_title {
+    h1 {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+
+  .skills .skills-container {
+    flex-direction: column;
+    align-items: center;
+
+    .skills-box {
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Reset generale */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Variabili colori */
+:root{
+    --primary-color: #ffb17a;
+    --secondary-color: yellow;
+    --pg-color: #676f8d;
+    --white: white;
+    --black: #2d3250;
+    --transition-fast: all .4s ease-in-out;
+    --transition-slow: all .6s ease-in-out;
+}
+
+/* Corpo della pagina */
+body{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    background-color: var(--black);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999 !important;
+}
+
+.logo h1{
+    font-size: 24px;
+    color: var(--white);
+    margin: 0;
+}
+
+.logo h1 span{
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.navbar-nav li a {
+    color: var(--white);
+    transition: var(--transition-slow);
+    text-decoration: none;
+}
+
+.navbar-nav li a:hover {
+    color: var(--primary-color);
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    padding: 0px 40px;
+}
+
+.icons i{
+    color: var(--white);
+    transition: var(--transition-slow);
+}
+
+.icons i:hover{
+    color: var(--secondary-color);
+}
+
+.bi-list{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+/* Pulsante personalizzato */
+a.btn.main-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent !important;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--white) !important;
+    font-size: 1.1rem;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+a.btn.main-btn:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--black) !important;
+    border: 2px solid var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero{
+    padding-top: 120px; /* spazio per navbar fissa */
+    padding-bottom: 120px;
+    background-color: var(--black);
+}
+
+.section_title{
+    position: relative;
+}
+
+.section_title h1{
+    font-size: 5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 6rem;
+    margin-bottom: 1rem;
+}
+
+.section_title h2{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.section_title p{
+    color: var(--pg-color);
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.section_image img{
+    width: 100%;
+    height: auto;
+    margin-top: -140px;
+}
+
+/* Skills Section */
+.skills{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px; /* prima poteva aggiungere spazio */
+    margin-bottom: 0;  /* rimuove spazio sotto la sezione */
+    background-color: var(--black);
+}
+
+.skills h2{
+    margin-bottom: 30px;
+    color: var(--white);
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.skills h2 span{
+    color: var(--primary-color);
+    font-size: 3.5rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* tutte le card stessa altezza */
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.skills-box {
+    flex: 0 1 250px;  
+    width: 250px;
+    max-width: 250px;
+    height: 350px;
+    background: var(--pg-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 0.2rem solid var(--white);
+    transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.skills-box:hover{
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.skills-box i{
+    font-size: 5rem;
+    color: blue;
+    margin-bottom: 15px;
+}
+
+.skills-box h3{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.skills-box p{
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Contatti */
+.contatti h2{
+    margin-bottom: 2rem;
+    font-size: 3.8rem;
+}
+
+/* Media queries */
+@media screen and (max-width:1199px){
+    .menu{
+        padding: 0px 20px;
+    }
+    .hero_title h1{
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .section_title p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:991px){
+    .hero_title img{
+        width:80%;
+        height: 80%;
+    }
+    .section_title h2{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:767px){
+    .hero_title h1{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .section_title p{
+        font-size: 0.9rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center; /* centrati su mobile */
+    }
+
+    .skills-box {
+        width: 80%;
+        max-width: 300px;
+        height: auto; /* si adatta al contenuto */
+    }
+}
+
+@media screen and (max-width:575px){
+    .hero_title h1{
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+    .main-btn{
+        width: 150px;
+        height: 40px;
+    }
+
+    .hero_image img{
+        width: 100%;
+        height: 100%;
+    }
+    .section_title h2{
+        font-size: 2rem;
+    }
+    .section_title p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+}
+
+/* --- PORTFOLIO --- */
+.portfolio {
+    background-color: black;
+    padding-top: 50px;
+}
+
+.portfolio_wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    place-items: center;
+    place-content: center;
+}
+
+/* Wrapper della card per gestire l'ombra */
+.portfolio_card_wrap {
+    position: relative;  /* necessario per l’ombra */
+    overflow: visible;   /* permette all’ombra di uscire */
+}
+
+/* Ombra esterna verde in alto a sinistra */
+.portfolio_card_wrap::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 170px;               /* dimensione iniziale */
+    height: 170px;              /* dimensione iniziale */
+    background-color: var(--primary-color); /* verde */
+    border-radius: 4px;
+    z-index: 0;                /* dietro la card */
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+/* Hover: l’ombra si estende lungo lato superiore e sinistro */
+.portfolio_card_wrap:hover::before {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+}
+
+/* Card principale */
+.portfolio_card {
+    width: 100%;
+    height: 100%;
+    background-color: var(--pg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    padding-top: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;  /* sopra l’ombra */
+}
+
+/* Immagini della card */
+.portfolio_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover della card: sfondo cambia colore */
+.portfolio_card:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 991px) {
+    .portfolio_wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .portfolio_wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contatti{
+    background-color: var(--black);
+    padding-bottom: 100px;
+}
+
+.contact_form{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input_box input{
+    width: 100%;
+    height: 55px;
+    padding-left: 12px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+/* Contenitore immagine */
+.contact_image{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.contact_image img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.main-btn{
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.contatti h2{
+    margin-top: 150px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .8rem 9%;
+    background: rgb(61, 61, 61);
+}
+
+.footer-text p{
+    font-size: 1.1rem;
+    padding-top: 20px;
+    color: var(--white);
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem 1rem .6rem 1rem;
+    background-color: var(--black);
+    border-radius: .8rem; 
+    text-decoration: none;
+}
+
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem green;
+}
+
+.footer-iconTop a i{
+    font-size: 2rem;
+    color:green;
+}
+
