@@ -1,4 +1,4 @@
-
+/* RESET BASE */
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +13,12 @@ html, body {
   color: #ffffff;
 }
 
+body {
+  padding-top: 80px; /* spazio sotto la navbar */
+}
+
 /* NAVBAR */
-.navbar{
+.navbar {
   width: 100%;
   color: #3f4d8e!important;
   padding: 0.5rem 0;
@@ -27,6 +31,7 @@ html, body {
 .navbar .logo h1 {
   font-size: 24px;
   color: #ffffff;
+  margin: 0;
 }
 
 .navbar .logo h1 span {
@@ -54,11 +59,7 @@ html, body {
 
 .navbar .main-btn:hover {
   background-color: #fd9c56;
-}
-
-
-body {
-  padding-top: 80px; 
+  color: #171c30;
 }
 
 /* HERO */
@@ -66,7 +67,7 @@ body {
   padding: 120px 0;
 }
 
-.hero .main-btn{
+.hero .main-btn {
   padding: 0.5rem 1rem;
   border: 2px solid #fd9c56;
   color: #ffffff;
@@ -74,11 +75,12 @@ body {
   transition: 0.4s;
 }
 
-.hero .main-btn:hover{
+.hero .main-btn:hover {
   background-color: #fd9c56;
+  color: #171c30;
 }
 
-.hero .section_title h1 {
+.hero .section_title h2 {
   font-size: 6rem;
   color: #fd9c56;
   font-weight: 700;
@@ -125,10 +127,10 @@ body {
 }
 
 .skills .skills-container .skills-box {
-  flex: 1 1 250px;     
+  flex: 1 1 250px;
   max-width: 350px;
   min-width: 200px;
-  height: auto;         
+  height: auto;
   background: #3f4d8e;
   padding: 20px;
   border-radius: 10px;
@@ -143,12 +145,6 @@ body {
 .skills .skills-container .skills-box:hover {
   border-color: #fd9c56;
   transform: scale(1.05);
-}
-
-.skills .skills-container .skills-box i {
-  font-size: 5rem;
-  color: #fd9c56;
-  margin-bottom: 15px;
 }
 
 .skills .skills-container .skills-box h3 {
@@ -167,18 +163,18 @@ body {
   padding: 50px 0;
 }
 
-.portfolio h2{
+.portfolio h2 {
   font-size: 3.4rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.portfolio h4{
-  font-size: 2rem;
-}
-
-.portfolio p{
+.portfolio p {
   font-size: 1.8rem;
   margin-top: 30px;
   margin-bottom: 80px;
+  text-align: center;
 }
 
 .portfolio .portfolio_wrap {
@@ -213,7 +209,7 @@ body {
 
 .portfolio .portfolio_card {
   width: 100%;
-  height: auto;         
+  height: auto;
   background-color: #3f4d8e;
   padding: 20px;
   border-radius: 10px;
@@ -237,15 +233,13 @@ body {
   border-radius: 10px;
 }
 
-/* SEZIONE CONTATTI */
+/* CONTATTI */
 .contatti {
   background-color: #171c30;
   padding: 50px 0 100px;
   color: #ffffff;
-  font-family: sans-serif;
 }
 
-/* TITOLI E TESTO */
 .contatti h2 {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -259,16 +253,14 @@ body {
   text-align: center;
 }
 
-/* WRAPPER FORM + IMMAGINE */
 .contatti .contact_wrapper {
   display: flex;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: center;
   gap: 30px;
 }
 
-/* FORM CONTATTI */
 .contatti .contact_form {
   flex: 1 1 50%;
   max-width: 600px;
@@ -281,15 +273,13 @@ body {
   gap: 15px;
 }
 
-/* BOX INPUT */
 .contatti .input_box {
   display: flex;
   gap: 10px;
   width: 100%;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
-/* INPUT E TEXTAREA */
 .contatti .input_box input,
 .contatti .input_box textarea {
   padding: 12px;
@@ -297,17 +287,15 @@ body {
   border-radius: 8px;
   outline: none;
   font-size: 1rem;
-  flex: 1; 
+  flex: 1;
 }
 
-/* TEXTAREA */
 .contatti .input_box textarea {
   width: 100%;
   resize: vertical;
   min-height: 150px;
 }
 
-/* PULSANTE INVIO */
 .contatti .main-btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -326,7 +314,6 @@ body {
   color: #171c30;
 }
 
-/* IMMAGINE CONTATTI */
 .contatti .contact_image {
   flex: 1 1 50%;
   display: flex;
@@ -340,28 +327,6 @@ body {
   height: auto;
   border-radius: 10px;
 }
-
-/* RESPONSIVE MOBILE */
-@media (max-width: 768px) {
-  .contatti .contact_wrapper {
-    flex-direction: column; 
-    align-items: center;
-  }
-
-  .contatti .contact_form,
-  .contatti .contact_image {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .contatti .input_box {
-    flex-direction: column; 
-  }
-}
-
-
-
-
 
 /* FOOTER */
 .footer {
@@ -397,20 +362,23 @@ body {
   color: #fd9c56;
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 991px) {
+/* RESPONSIVE */
+@media (max-width: 991px) {
   .portfolio_wrap {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  .contatti .row {
+  .contatti .contact_wrapper {
     flex-direction: column;
+    align-items: center;
+  }
+  .contatti .contact_form,
+  .contatti .contact_image {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
-@media screen and (max-width: 575px) {
-  .portfolio_wrap {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 575px) {
   .hero .section_title h1 {
     font-size: 3rem;
     line-height: 4rem;
@@ -424,6 +392,7 @@ body {
     max-width: 90%;
   }
 }
+
 
 
 

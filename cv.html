@@ -4,144 +4,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV di Fabio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:#171c30;
+      color:white;
+      margin:0;
+      padding-top:80px;
+    }
+    /* Navbar */
+    .navbar-custom {
+      background-color: #212529; 
+    }
+    .navbar-custom .navbar-brand {
+      color: #fff;
+      font-size: 1.8rem;
+    }
+    .navbar-custom .navbar-brand span {
+      color: #fd9c56;
+      font-size: 18px;
+    }
+    .navbar-custom .nav-link {
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #fd9c56;
+    }
+    .navbar-custom .btn-primary {
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      border: 2px solid;
+      border-color: #fd9c56;
+    }
+    .navbar-custom .btn-primary:hover {
+      background-color: #e6893e;
+      border-color: #e6893e;
+      color: #1f2233;
+    }
+    .social-icons a {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #fd9c56;
+    }
+
+    /* Sezioni */
+    section, header {
+      margin-bottom: 30px;
+    }
+    .section-box {
+      padding:20px;
+      border-radius:10px;
+    }
+    .dark-box { background-color:#2a2d41; border:2px solid #676f8d; }
+    .light-box { background-color:#3f4d8e; border:2px solid #fd9c56; }
+    h2 { color:#fd9c56; margin-top:0; }
+    table { width:100%; border-collapse: collapse; color:white; margin-top:10px; }
+    table th, table td { padding:8px; border:1px solid #fd9c56; }
+    table th { background-color:#fd9c56; color:black; }
+    p { line-height:1.6; }
+
+    /* Footer */
+    footer a.home-btn {
+      position:absolute;
+      right:20px;
+      top:50%;
+      transform:translateY(-50%);
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      width:50px;
+      height:50px;
+      background-color:#fd9c56;
+      border-radius:50%;
+      text-decoration:none;
+      font-size:1.5rem;
+      color:#1f2233;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif; background-color:#171c30; color:white; padding:20px;">
+<body>
 
-  <!-- Titolo principale -->
-  <header style="text-align:center; margin-bottom:40px;">
-    <h1 style="font-size:3rem; color:#fd9c56; margin-bottom:10px;">Fabio DLT</h1>
-    <p style="font-size:1.2rem; color:#ffffff;">Web Developer & UX/UI Designer</p>
-    <hr style="border:2px solid #fd9c56; width:50%; margin:auto; margin-top:20px;">
-  </header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Fabio <span>DL</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <!-- Profilo -->
-  <section style="margin-bottom:30px;">
-    <div style="padding:20px; border:2px solid #fd9c56; background-color:#3f4d8e; border-radius:10px;">
-      <h2 style="color:#fd9c56;">Profilo</h2>
-      <style>
-        p{line-height: 1.6;}
-      </style>
-      <p>Mi chiamo Fabio, ho 24 anni e sono un UX/UI designer con un percorso multidisciplinare.
-         Ho iniziato come cuoco nel 2017, esperienza che mi ha insegnato a lavorare in team e a gestire situazioni di forte pressione. <br>
-         Ho poi lavorato nel settore immobiliare, acquisendo competenze nella gestione aziendale, nelle relazioni e nel marketing. <br>
-         In seguito mi sono dedicato alla fotografia, sviluppando sensibilità estetica e tecnica. <br>
-          Oggi, grazie a un percorso formativo in UX/UI design, unisco queste esperienze per progettare interfacce intuitive e migliorare l’esperienza digitale delle persone, offrendo ai clienti soluzioni complete e innovative.</p>
-    </div>
-  </section>
-
-  <!-- Esperienza lavorativa -->
-  <section style="margin-bottom:30px;">
-    <div style="padding:20px; border:2px solid #676f8d; background-color:#2a2d41; border-radius:10px;">
-      <h2 style="color:#fd9c56;">Esperienza Lavorativa</h2>
-      <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-color:#fd9c56; color:white; margin-top:10px;">
-        <tr style="background-color:#fd9c56; color:black;">
-          <th>Anno</th>
-          <th>Posizione</th>
-          <th>Azienda</th>
-        </tr>
-        <tr>
-          <td>2024-2025</td>
-          <td>Capo partita </td>
-          <td>3zinnen spa</td>
-        </tr>
-        <tr>
-          <td>2023-2023</td>
-          <td>Fotografo</td>
-          <td>Il Gruppo Digitale</td>
-        </tr>
-        <tr>
-          <td>2022-2023</td>
-          <td>Procacciatore d' affari</td>
-          <td>Tempocasa spa</td>
-        </tr>
-        <tr>
-          <td>2021-2021</td>
-          <td>Aiuto cuoco</td>
-          <td>antony hotel</td>
-        </tr>
-        <tr>
-          <td>2021-2021</td>
-          <td>capo partita/responsabile di cucina</td>
-          <td>villa santa maria</td>
-        </tr>
-        <tr>
-          <td>2020-2020</td>
-          <td>capo partita</td>
-          <td>Franceschi park hotel</td>
-        </tr>
-        <tr>
-          <td>2019-2019</td>
-          <td>Aiuto cuoco</td>
-          <td>Menardi hotel</td>
-        </tr>
-        <tr>
-          <td>2018-2018</td>
-          <td>Aiuto cuoco</td>
-          <td>Franceschi park hotel</td>
-        </tr>
-        <tr>
-          <td>2017-2018</td>
-          <td>Aiuto cuoco</td>
-          <td>Rifugio Padova</td>
-        </tr>
-      </table>
-    </div>
-  </section>
-
-  <!-- Formazione -->
-  <section style="margin-bottom:30px;">
-    <div style="padding:20px; border:2px solid #fd9c56; background-color:#3f4d8e; border-radius:10px;">
-      <h2 style="color:#fd9c56;">Formazione</h2>
-      <ul style="margin-top:10px; line-height:1.6;">
-        <li>2019-2020: diploma presso istituto professionale per l'enogastronomia e l'ospitalità alberghiera.</li>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contatti">Contatti</a></li>
+        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
       </ul>
-    </div>
-  </section>
-
-  <!-- Competenze -->
-  <section style="margin-bottom:30px;">
-    <div style="padding:20px; border:2px solid #676f8d; background-color:#2a2d41; border-radius:10px;">
-      <h2 style="color:#fd9c56;">Competenze</h2>
-      <ul style="margin-top:10px; line-height:1.6;">
-        <li>HTML, CSS, JavaScript</li>
-        <li>Flexbox & Grid System</li>
-        <li>Responsive Design</li>
-        <li>UX/UI Design</li>
-        <li>Adobe Photoshop & Illustrator</li>
-        <li>Fotografia naturalistica, eventi, interni, servizi personalizzati</li>
-        <li>Gestione autonoma dei compiti e rispetto delle tempistiche assegante</li>
-        <li>Gestione autonoma di servizi ricettivi e enogastronomici</li>
-        <li>Valutazioni immobiliari</li>
-        <li>Gestione dei clienti e fornitori</li>
+       <ul class="navbar-nav d-none d-lg-flex flex-row gap-3 ms-3">
+        <li class="nav-item"><a href="https://www.github.com/fabio01delo" class="nav-link" target="_blank" rel="noopener"><i class="bi bi-github"></i></a></li>
+        <li class="nav-item"><a href="https://www.facebook.com/Fabio De Lorenzo" class="nav-link" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a></li>
+        <li class="nav-item"><a href="https://www.instagram.com/fabio_delo_" class="nav-link" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a></li>
       </ul>
-    </div>
-  </section>
+        <a href="#contatti" class="btn btn-primary ms-3 d-none d-lg-inline-block">Contattami</a>
 
-  <!-- Contatti -->
-  <section style="margin-bottom:30px;">
-    <div style="padding:20px; border:2px solid #fd9c56; background-color:#3f4d8e; border-radius:10px;">
-      <h2 style="color:#fd9c56;">Contatti</h2>
-      <p>Email: <span style="color:#fd9c56;">fabiodelorenzot@gmail.com</span></p>
-      <p>Telefono: <span style="color:#fd9c56;">+39 123 456 789</span></p>
+      </div>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- Footer -->
+<!-- Titolo principale -->
+<header id="home" style="text-align:center; margin-bottom:40px;">
+  <h1 style="font-size:3rem; color:#fd9c56; margin-bottom:10px;">Fabio DLT</h1>
+  <p style="font-size:1.2rem; color:#ffffff;">Web Developer & UX/UI Designer</p>
+  <hr style="border:2px solid #fd9c56; width:50%; margin:auto; margin-top:20px;">
+</header>
+
+<!-- Profilo -->
+<section>
+  <div class="section-box light-box">
+    <h2>Profilo</h2>
+    <p>Mi chiamo Fabio, ho 24 anni e sono un UX/UI designer con un percorso multidisciplinare.
+       Ho iniziato come cuoco nel 2017, esperienza che mi ha insegnato a lavorare in team e a gestire situazioni di forte pressione. <br>
+       Ho poi lavorato nel settore immobiliare, acquisendo competenze nella gestione aziendale, nelle relazioni e nel marketing. <br>
+       In seguito mi sono dedicato alla fotografia, sviluppando sensibilità estetica e tecnica. <br>
+       Oggi, grazie a un percorso formativo in UX/UI design, unisco queste esperienze per progettare interfacce intuitive e migliorare l’esperienza digitale delle persone, offrendo ai clienti soluzioni complete e innovative.</p>
+  </div>
+</section>
+
+<!-- Esperienza lavorativa -->
+<section>
+  <div class="section-box dark-box">
+    <h2>Esperienza Lavorativa</h2>
+    <table>
+      <tr><th>Anno</th><th>Posizione</th><th>Azienda</th></tr>
+      <tr><td>2024-2025</td><td>Capo partita</td><td>3zinnen spa</td></tr>
+      <tr><td>2023-2023</td><td>Fotografo</td><td>Il Gruppo Digitale</td></tr>
+      <tr><td>2022-2023</td><td>Procacciatore d'affari</td><td>Tempocasa spa</td></tr>
+      <tr><td>2021-2021</td><td>Aiuto cuoco</td><td>Antony Hotel</td></tr>
+      <tr><td>2021-2021</td><td>Capo partita/responsabile di cucina</td><td>Villa Santa Maria</td></tr>
+      <tr><td>2020-2020</td><td>Capo partita</td><td>Franceschi Park Hotel</td></tr>
+      <tr><td>2019-2019</td><td>Aiuto cuoco</td><td>Menardi Hotel</td></tr>
+      <tr><td>2018-2018</td><td>Aiuto cuoco</td><td>Franceschi Park Hotel</td></tr>
+      <tr><td>2017-2018</td><td>Aiuto cuoco</td><td>Rifugio Padova</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- Formazione -->
+<section>
+  <div class="section-box light-box">
+    <h2>Formazione</h2>
+    <ul style="line-height:1.6;">
+      <li>2019-2020: diploma presso istituto professionale per l'enogastronomia e l'ospitalità alberghiera.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Competenze -->
+<section>
+  <div class="section-box dark-box">
+    <h2>Competenze</h2>
+    <ul style="line-height:1.6;">
+      <li>HTML, CSS, JavaScript</li>
+      <li>Flexbox & Grid System</li>
+      <li>Responsive Design</li>
+      <li>UX/UI Design</li>
+      <li>Adobe Photoshop & Illustrator</li>
+      <li>Fotografia naturalistica, eventi, interni, servizi personalizzati</li>
+      <li>Gestione autonoma dei compiti e rispetto delle tempistiche assegnate</li>
+      <li>Gestione autonoma di servizi ricettivi e enogastronomici</li>
+      <li>Valutazioni immobiliari</li>
+      <li>Gestione dei clienti e fornitori</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contatti -->
+<section id="contatti">
+  <div class="section-box light-box">
+    <h2>Contatti</h2>
+    <p>Email: <span style="color:#fd9c56;">fabiodelorenzot@gmail.com</span></p>
+    <p>Telefono: <span style="color:#fd9c56;">+39 123 456 789</span></p>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer style="text-align:center; margin-top:40px; position:relative;">
   <hr style="border:1px solid #fd9c56; width:50%; margin:auto;">
   <p style="margin-top:10px; color:#676f8d;">© 2025 Fabio DL. Tutti i diritti riservati.</p>
-  
-  <!-- Bottone casa a destra -->
-  <a href="index.html" 
-     style="position:absolute; right:20px; top:50%; transform:translateY(-50%);
-            display:inline-flex; justify-content:center; align-items:center;
-            width:50px; height:50px; background-color:#fd9c56; border-radius:50%;
-            text-decoration:none; font-size:1.5rem; color:#1f2233;">
-    🏠
-  </a>
+  <a href="index.html" class="home-btn">🏠</a>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
 
 
 
