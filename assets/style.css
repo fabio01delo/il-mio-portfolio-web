@@ -393,6 +393,23 @@ body {
   }
 }
 
+.navbar .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 991px) {
+  .navbar .social-icons {
+    position: absolute;
+    right: 10px; /* spostale a destra */
+    top: 10px;   /* adatta */
+    z-index: 1000;
+  }
+  .navbar .social-icons i {
+    font-size: 1.5rem;
+  }
+}
 
 
 
