@@ -1,38 +1,18 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Charset e viewport -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Titolo e descrizione -->
-<meta property="og:title" content="Il mio portfolio online" />
-<meta property="og:description" content="Guarda ora il portfolio online di Fabio De Lorenzo Tobolo" />
-
-<!-- Immagine anteprima -->
-<meta property="og:image" content="https://fabio01delo.github.io/il-mio-portfolio-web/assets/immagine-copertina.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<!-- URL e tipo -->
-<meta property="og:url" content="https://fabio01delo.github.io/il-mio-portfolio-web/" />
-<meta property="og:type" content="website" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Il mio portfolio online" />
-<meta name="twitter:description" content="Guarda ora il portfolio online di Fabio De Lorenzo Tobolo" />
-<meta name="twitter:image" content="https://fabio01delo.github.io/il-mio-portfolio-web/assets/immagine-copertina.png" />
-
   <title>CV di Fabio</title>
+
+  <!-- Bootstrap prima -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-  <!-- link al file CSS esterno -->
-  <link rel="stylesheet" href="assets/cvstyle.css">
+
+  <!-- Stile personalizzato DOPO Bootstrap -->
+  <link rel="stylesheet" href="assets/css/cvstyle.css">
+
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -40,8 +20,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">Fabio <span>DL</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -53,15 +32,12 @@
         <li class="nav-item"><a class="nav-link" href="index.html#contatti">Contatti</a></li>
         <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
       </ul>
-       <ul class="navbar-nav d-none d-lg-flex flex-row gap-3 ms-3">
+    </div>
+     <ul class="navbar-nav d-none d-lg-flex flex-row gap-3 ms-3">
         <li class="nav-item"><a href="https://www.github.com/fabio01delo" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a></li>
         <li class="nav-item"><a href="https://www.facebook.com/Fabio De Lorenzo" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a></li>
         <li class="nav-item"><a href="https://www.instagram.com/fabio_delo_" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a></li>
       </ul>
-        <a href="#contatti" class="btn btn-primary ms-3 d-none d-lg-inline-block">Contattami</a>
-
-      </div>
-    </div>
   </div>
 </nav>
 
@@ -74,7 +50,6 @@
 
 <!-- SEZIONE CARD PROFILO E COMPETENZE -->
 <section class="cards-section">
-  <!-- Card Profilo -->
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -92,7 +67,6 @@
     </div>
   </div>
 
-  <!-- Card Competenze -->
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -116,67 +90,52 @@
   </div>
 </section>
 
-
 <!-- Esperienza lavorativa -->
-<section>
-  <div class="section-box dark-box">
-    <h2>Esperienza Lavorativa</h2>
-    <table>
-      <tr><th>Anno</th><th>Posizione</th><th>Azienda</th></tr>
-      <tr><td>2024-2025</td><td>Capo partita</td><td>3zinnen spa</td></tr>
-      <tr><td>2023-2023</td><td>Fotografo</td><td>Il Gruppo Digitale</td></tr>
-      <tr><td>2022-2023</td><td>Procacciatore d'affari</td><td>Tempocasa spa</td></tr>
-      <tr><td>2021-2021</td><td>Aiuto cuoco</td><td>Antony Hotel</td></tr>
-      <tr><td>2021-2021</td><td>Capo partita/responsabile di cucina</td><td>Villa Santa Maria</td></tr>
-      <tr><td>2020-2020</td><td>Capo partita</td><td>Franceschi Park Hotel</td></tr>
-      <tr><td>2019-2019</td><td>Aiuto cuoco</td><td>Menardi Hotel</td></tr>
-      <tr><td>2018-2018</td><td>Aiuto cuoco</td><td>Franceschi Park Hotel</td></tr>
-      <tr><td>2017-2018</td><td>Aiuto cuoco</td><td>Rifugio Padova</td></tr>
-    </table>
-  </div>
+<section class="section-box">
+  <h2>Esperienza Lavorativa</h2>
+  <table>
+    <tr><th>Anno</th><th>Posizione</th><th>Azienda</th></tr>
+    <tr><td>2024-2025</td><td>Capo partita</td><td>3zinnen spa</td></tr>
+    <tr><td>2023-2023</td><td>Fotografo</td><td>Il Gruppo Digitale</td></tr>
+    <tr><td>2022-2023</td><td>Procacciatore d'affari</td><td>Tempocasa spa</td></tr>
+    <tr><td>2021-2021</td><td>Aiuto cuoco</td><td>Antony Hotel</td></tr>
+    <tr><td>2021-2021</td><td>Capo partita/responsabile di cucina</td><td>Villa Santa Maria</td></tr>
+    <tr><td>2020-2020</td><td>Capo partita</td><td>Franceschi Park Hotel</td></tr>
+    <tr><td>2019-2019</td><td>Aiuto cuoco</td><td>Menardi Hotel</td></tr>
+    <tr><td>2018-2018</td><td>Aiuto cuoco</td><td>Franceschi Park Hotel</td></tr>
+    <tr><td>2017-2018</td><td>Aiuto cuoco</td><td>Rifugio Padova</td></tr>
+  </table>
 </section>
 
 <!-- Formazione -->
-<section>
-  <div class="section-box light-box">
-    <h2>Formazione</h2>
-    <ul class="formazione-list">
-      <li>2019-2020: diploma presso istituto professionale per l'enogastronomia e l'ospitalità alberghiera.</li>
-    </ul>
-  </div>
+<section class="section-box">
+  <h2>Formazione</h2>
+  <ul class="formazione-list">
+    <li>2019-2020: diploma presso istituto professionale per l'enogastronomia e l'ospitalità alberghiera.</li>
+  </ul>
 </section>
 
 <!-- Contatti -->
-<section id="contatti">
-  <div class="section-box dark-box contatti-box">
-    <h2>Contatti</h2>
-    <p>Email: <span class="highlight">fabiodelorenzot@gmail.com</span></p>
-    <p>Telefono: <span class="highlight">+39 123 456 789</span></p>
-  </div>
+<section id="contatti" class="section-box contatti-box">
+  <h2>Contatti</h2>
+  <p>Email: <span class="highlight">fabiodelorenzot@gmail.com</span></p>
+  <p>Telefono: <span class="highlight">+39 123 456 789</span></p>
 </section>
 
 <!-- Footer -->
-<footer class="main-footer">
+<footer>
   <hr>
   <p>© 2025 Fabio DL. Tutti i diritti riservati.</p>
-  <a href="index.html" class="home-btn">🏠</a>
+  <a href="#home" class="home-btn">🏠</a>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- SCRIPT FLIP MOBILE -->
-<script>
-  document.querySelectorAll('.flip-card').forEach(card => {
-    card.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        card.classList.toggle('flipped');
-      }
-    });
-  });
-</script>
-
+<script src="assets/js/script.js"></script>
 </body>
 </html>
+
+
+
 
 
 
