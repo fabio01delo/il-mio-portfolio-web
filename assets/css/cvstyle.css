@@ -6,7 +6,7 @@ html, body {
   background-color: #171c30 !important;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 80px;
+  padding-top: 35px;
 }
 
 /* Navbar */
@@ -80,6 +80,11 @@ p, ul {
   padding: 20px;
   margin-bottom: 30px;
   color: white;
+}
+
+#formazione{
+  background-color:#3f4d8e ;
+  border-color: #fd9c56 ;
 }
 
 /* Tabelle */
@@ -201,7 +206,7 @@ footer a.home-btn {
 }
 
 .flip-card-front h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
 }
 
