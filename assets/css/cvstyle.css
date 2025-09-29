@@ -168,15 +168,6 @@ footer a.home-btn {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Stato flipped su mobile */
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -210,13 +201,36 @@ footer a.home-btn {
   margin: 0;
 }
 
-/* Responsive */
+/* --- Hover solo su desktop --- */
+@media (min-width: 769px) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* --- Click su mobile --- */
 @media (max-width: 768px) {
+  /* Impilare le card una sotto l'altra */
+  .cards-section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
   .flip-card {
     width: 100%;
+    max-width: 500px; /* facoltativo per non diventare troppo larga */
   }
+
+  /* Disabilita hover su mobile */
   .flip-card:hover .flip-card-inner {
     transform: none;
   }
+
+  /* Flip su click */
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 }
+
 
